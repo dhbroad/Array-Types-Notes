@@ -1,0 +1,25 @@
+Types of Array Problem Approaches
+Sliding Window 
+Whenever you are considering multiple sub arrays, avoids making repeated calculations inside of the arrays. Or when you are looking for a subarray that has to meet a certain set of conditions.
+Fixed size
+Sub_array = arr[:k]
+For I in range(len(arr)):
+Sub_array = sub_arrray – arr[i-1]
+Sub_array = sub_array + arr[i+k-1]
+Dynamically-sized – O(N)
+Expand window until condition is met, then contract until we find the smallest size window that meets the condition
+ 
+
+
+Two Pointer
+Ex1 When you have to sort array and there is only 2 values throughout
+First pointer is on left and second pointer is on point of right. Move each pointer towards center until the condition of one pointer is not met, wait for the other pointer and then swap the values.
+Ex2 When you have to sort an array and there is only 3 values throughout. (dutch flag)
+First pointer only cares about 1 value, second pointer continues for either of the other values. After the initial sort, you sort again but only the right side with the remaining unsorted 2 values.
+
+Binary Search
+For sorted arrays, split the array in half and check to see if the value is less than, greater, or equal to what you’re looking for. Move the appropriate pointer to the split point plus or minus 1 and repeat until left pointer is equal to right.
+Can be used to find peaks.
+
+Rearrange by index
+Checking if there are duplicate numbers in constant space. Check what a number is, then move it to its index. If there is a duplicate, you will reach the index twice.
